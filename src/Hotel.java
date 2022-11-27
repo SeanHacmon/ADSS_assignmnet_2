@@ -63,16 +63,16 @@ public class Hotel implements  ITestable{
     public boolean checkConstraints()
     {
         // ~~ task 6 | Sean's code ~~
-        int vipCounter = 0;
-        for (Room r: this.rooms.values())
-        {
-            if (r.getRoomCategory().getType() == RoomCategory.RoomType.VIP)
-            {
-                vipCounter++;
-            }
-        }
-        if (this.rooms.size() > 0)
-        {if ((100*vipCounter)/this.rooms.size() > 10) {return false;}}
+//        int vipCounter = 0;
+//        for (Room r: this.rooms.values())
+//        {
+//            if (r.getRoomCategory().getType() == RoomCategory.RoomType.VIP)
+//            {
+//                vipCounter++;
+//            }
+//        }
+//        if (this.rooms.size() > 0)
+//        {if ((100*vipCounter)/this.rooms.size() > 10) {return false;}}
         // ~~ task 7 | Sean's code ~~
         if (this.city.equals("Las Vegas") || this.city.equals("las vegas") || this.city.equals("LAS VEGAS"))
         {for (Client c: allReservation.keySet()) {if (c.getAge() < 21) {return false;}}}
@@ -87,31 +87,32 @@ public class Hotel implements  ITestable{
         if (this.getServices().size() > serviceNames.size()){return false;}
 
         // ~~ task 12 | Sean's code ~~
-        int amount = 0;
-        int year = 0;
-        Calendar calendar = new GregorianCalendar();
-        HashMap<Integer, Integer> allYears = new HashMap<>();
-        for (HotelService hs: this.services.values())
-        {
-            for (Booking b : hs.getGivenServices())
-            {
-                amount = hs.getPrice();
-                calendar.setTime(b.getDate());
-                year = calendar.get(Calendar.YEAR);
-                allYears.put(year, amount);
-            }
-        }
-
-        ArrayList<Integer> sortedMap = new ArrayList<>(allYears.keySet());
-        Collections.sort(sortedMap);
-        for (int i=0;i<sortedMap.size()-1; i++)
-        {
-            if (allYears.get(sortedMap.get(i)) < allYears.get(sortedMap.get(i+1)))
-            {
-                return false;
-            }
-        }
-
+//        int amount = 0;
+//        int year = 0;
+//        Calendar calendar = new GregorianCalendar();
+//        HashMap<Integer, Integer> allYears = new HashMap<>();
+//        for (HotelService hs: this.services.values())
+//        {
+//            for (Booking b : hs.getGivenServices())
+//            {
+//                amount = hs.getPrice();
+//                calendar.setTime(b.getDate());
+//                year = calendar.get(Calendar.YEAR);
+//                allYears.put(year, amount);
+//            }
+//        }
+//
+//        ArrayList<Integer> sortedMap = new ArrayList<>(allYears.keySet());
+//        Collections.sort(sortedMap);
+//        for (int i=0;i<sortedMap.size()-1; i++)
+//        {
+//            if (allYears.get(sortedMap.get(i)) < allYears.get(sortedMap.get(i+1)))
+//            {
+//                return false;
+//            }
+//        }
+//
+//        return true;
         return true;
     }
 

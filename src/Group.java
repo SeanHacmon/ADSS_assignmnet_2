@@ -44,25 +44,26 @@ public class Group implements  ITestable{
                 return false; }
 
         // ~~ task 10 | Sean's code ~~
-        int fiveStarRating = 0;
-        int totalRating = 0;
-        for(Hotel h: this.hotels)
-        {
-            if (h.getRate() == 5)
-            {
-                Collection<Room> rooms = h.getRooms().values();
-                for (Room r: rooms)
-                {
-                   for (Booking b: r.getBookings().values())
-                   {
-                       fiveStarRating += b.getReview().getRank();
-                       totalRating++;
-                   }
-                }
-            }
-        }
-        if ((float)fiveStarRating/(float)totalRating <= 7.5) {return false;}
-
+//        int fiveStarRating = 0;
+//        int totalRating = 0;
+//        for(Hotel h: this.hotels)
+//        {
+//            if (h.getRate() == 5)
+//            {
+//                Collection<Room> rooms = h.getRooms().values();
+//                for (Room r: rooms)
+//                {
+//                   for (Booking b: r.getBookings().values())
+//                   {
+//                       fiveStarRating += b.getReview().getRank();
+//                       totalRating++;
+//                   }
+//                }
+//            }
+//        }
+//        if ((float)fiveStarRating/(float)totalRating <= 7.5) {return false;}
+//
+//        return true;
         return true;
     }
     public static boolean checkAllIntancesConstraints(Model model){

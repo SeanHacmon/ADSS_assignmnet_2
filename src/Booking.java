@@ -58,8 +58,8 @@ public class Booking implements  ITestable{
     public boolean checkConstraints()
     {
         // ~~ task 13 | Sean's code
-        for (int i =0;i<services.size();i++)
-        {if (this.services.get(i).getHotel() != this.getRoom().getHotel()) {return false;}}
+//        for (int i =0;i<services.size();i++)
+//        {if (this.services.get(i).getHotel() != this.getRoom().getHotel()) {return false;}}
 
         // ~~ task 8 | Sean's code
         return (reservation.getRoomCategory().getType() == RoomCategory.RoomType.VIP && room.getRoomCategory().getType() == RoomCategory.RoomType.VIP) ||

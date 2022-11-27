@@ -40,12 +40,13 @@ public class ReservationSet implements  ITestable{
     public boolean checkConstraints()
     {
         // ~~ task 9 | Sean's code ~~
-       for(Service s : this.hotel.getServices().keySet())
-       {
-           if (s instanceof VipService)
-           {for (Reservation r : reservations){
-               if (r.getBookings() != null){if (r.getBookings().getReview() == null){return false;}}}}
-       }
+//       for(Service s : this.hotel.getServices().keySet())
+//       {
+//           if (s instanceof VipService)
+//           {for (Reservation r : reservations){
+//               if (r.getBookings() != null){if (r.getBookings().getReview() == null){return false;}}}}
+//       }
+//        return true;
         return true;
     }
 
